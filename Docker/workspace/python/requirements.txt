@@ -3,7 +3,9 @@ pandas
 seaborn
 flask
 sklearn
+matplotlib
 jupyter
 scikit-learn
 sklearn
 tensorflow
+stop_words
