@@ -1,0 +1,4 @@
+python:
+    build: python
+    ports:
+       - "8000:8000"
