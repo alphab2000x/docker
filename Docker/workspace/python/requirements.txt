@@ -1,6 +1,9 @@
-numpy
+numpy==1.16.0
 pandas
 seaborn
 flask
 sklearn
 jupyter
+scikit-learn
+sklearn
+tensorflow
