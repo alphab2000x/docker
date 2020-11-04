@@ -7,6 +7,20 @@ services:
         networks:
            node_net:
              ipv4_address: 172.28.1.4
+    streamlit:
+        build: streamlit
+        ports:
+           - "8501:8501"   
+        networks:
+           node_net:
+             ipv4_address: 172.28.1.5
+    fastapi:
+        build: fastapi
+        ports:
+           - "8001:8001"   
+        networks:
+           node_net:
+             ipv4_address: 172.28.1.6
               
 networks:
   node_net:
