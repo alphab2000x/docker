@@ -1,16 +1,3 @@
-FROM ubuntu
-
-WORKDIR /usr/src/fastapi
-COPY . .
-RUN apt-get -y update
-
-RUN apt-get -y install python3 \
-&& apt-get -y install python3-pip \
-&& apt-get install -y git \
-&& apt-get install -y vim \
-&& apt-get install -y nmap \
-&& pip3 install -r requirements.txt 
-
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001"]
-# RUN chmod +x test/test_api.sh
-# CMD ["/bin/sh", "./test/test_api.sh"]
+FROM postgres:9.4
+RUN localedef -i de_DE -c -f UTF-8 -A /usr/share/locale/locale.alias de_DE.UTF-8
+ENV LANG de_DE.utf8
