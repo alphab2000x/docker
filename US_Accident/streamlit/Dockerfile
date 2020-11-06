@@ -10,5 +10,4 @@ RUN apt-get -y install python3 \
 && apt-get install -y vim \
 && pip3 install -r requirements.txt 
 
-# CMD ["python", "algo.py"]
 CMD ["streamlit", "run", "streamlit.py"]
